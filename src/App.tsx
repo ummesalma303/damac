@@ -2,7 +2,8 @@ import React from 'react';
 import NavBar from './components/NavBar';
 import Banner from './components/Banner';
 import Info from './components/Info';
-
+import BuildingVideo from './components/BuildingVideo';
+import Footer from './components/Footer';
 const LagoonLandingPage: React.FC = () => {
   return (
     <div className="w-full bg-white font-poppins">
@@ -16,22 +17,7 @@ const LagoonLandingPage: React.FC = () => {
    <Info/>
 
       {/* Building Images */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-8">
-            <img 
-              src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop" 
-              alt="Building View 1" 
-              className="w-full h-96 object-cover rounded-lg shadow-lg"
-            />
-            <img 
-              src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&h=600&fit=crop" 
-              alt="Building View 2" 
-              className="w-full h-96 object-cover rounded-lg shadow-lg"
-            />
-          </div>
-        </div>
-      </section>
+      <BuildingVideo/>
 
       {/* Find Your Dream Home */}
       <section className="relative h-96">
@@ -300,55 +286,7 @@ const LagoonLandingPage: React.FC = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-teal-600 rounded"></div>
-                <span className="text-xl font-light">DAMAC</span>
-              </div>
-              <p className="text-sm text-gray-400">
-                Leading luxury real estate developer in Dubai
-              </p>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li><a href="#" className="hover:text-white">About Us</a></li>
-                <li><a href="#" className="hover:text-white">Projects</a></li>
-                <li><a href="#" className="hover:text-white">Contact</a></li>
-                <li><a href="#" className="hover:text-white">Careers</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li>Dubai, United Arab Emirates</li>
-                <li>Phone: +971 4 123 4567</li>
-                <li>Email: info@damaclagoon.ae</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
-              <div className="flex space-x-4">
-                <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-teal-600">
-                  <span className="text-xl">f</span>
-                </a>
-                <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-teal-600">
-                  <span className="text-xl">in</span>
-                </a>
-                <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-teal-600">
-                  <span className="text-xl">ig</span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
-            <p>&copy; 2025 DAMAC Properties. All rights reserved. | Privacy Policy | Terms & Conditions</p>
-          </div>
-        </div>
-      </footer>
+     <Footer></Footer>
     </div>
   );
 };
