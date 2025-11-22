@@ -5,6 +5,7 @@ import Info from './components/Info';
 import BuildingVideo from './components/BuildingVideo';
 import Footer from './components/Footer';
 import Dream from './components/Dream';
+import LagoonViews from './components/LagoonViews';
 
 const LagoonLandingPage: React.FC = () => {
   return (
@@ -24,30 +25,9 @@ const LagoonLandingPage: React.FC = () => {
       {/* Find Your Dream Home */}
      <Dream/>
 
-      {/* Lagoon Details */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <img 
-                src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&h=400&fit=crop" 
-                alt="Damac Lagoon" 
-                className="w-full rounded-lg shadow-lg"
-              />
-              <div className="mt-6 text-center">
-                <h3 className="text-2xl font-light text-gray-800">Damac Lagoon</h3>
-              </div>
-            </div>
-            <div className="bg-teal-600 text-white p-12 rounded-lg">
-              <h2 className="text-4xl font-light mb-6">LAGOON</h2>
-              <p className="text-sm leading-relaxed">
-                Discover a new dimension of waterfront living at DAMAC Lagoon. Surrounded by crystal clear lagoons and pristine beaches, this exclusive community offers a resort-style lifestyle with world-class amenities and services.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      {/* Lagoon views */}
+    
+    <LagoonViews/>
       {/* Amenities */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
