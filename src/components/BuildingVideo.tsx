@@ -1,33 +1,43 @@
-import React from 'react'
-import video from "/assets/Compressed_video.mp4";
-
-
 import { useState } from "react";
 import { PlayIcon } from 'lucide-react';
+import video from "/assets/Compressed_video.mp4";
 
 export default function BuildingVideo() {
   const [showVideo, setShowVideo] = useState(false);
 
   return (
-    <div className="relative w-full  rounded-2xl overflow-hidden shadow-lg">
-      {/* Background Image */}
-   
-        <div className="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
-            <video src={video} autoPlay className="rounded-lg"></video>
-        </div>
-  
+    <div className="relative w-full rounded-2xl overflow-hidden shadow-lg">
+      <div className="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+        <div className="bg-black relative rounded-lg overflow-hidden">
+          {/* Video */}
+          <video
+            src={video}
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full rounded-lg"
+          />
 
-      {/* Play Button */}
-      <button
-        onClick={() => setShowVideo(true)}
-        className="absolute inset-0 flex items-center justify-center"
-      >
-        <div className="w-60 h-12 bg-white/30 backdrop-blur-md rounded-full px-4 flex items-center justify-center space-x-2 text-white hover:scale-110 transition ">
-         
-          <PlayIcon />
-          <h2 className='text-nowrap'>View Full Presentation</h2>
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black/20 flex items-center justify-center rounded-lg">
+            <h2 className="text-white text-2xl font-semibold">
+              Building Presentation
+            </h2>
+          </div>
+
+          {/* Play Button */}
+          <button
+            onClick={() => setShowVideo(true)}
+            className="absolute inset-0 flex items-center justify-center"
+          >
+            <div className="w-60 h-12 bg-white/30 backdrop-blur-md rounded-full px-4 flex items-center justify-center space-x-2 text-white hover:scale-110 transition">
+              <PlayIcon />
+              <h2 className='whitespace-nowrap'>View Full Presentation</h2>
+            </div>
+          </button>
         </div>
-      </button>
+      </div>
 
       {/* Fullscreen Video Popup */}
       {showVideo && (
@@ -44,6 +54,8 @@ export default function BuildingVideo() {
               src={video}
               controls
               autoPlay
+              muted
+              playsInline
               className="w-full rounded-lg"
             />
           </div>

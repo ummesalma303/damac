@@ -4,6 +4,8 @@ import Banner from './components/Banner';
 import Info from './components/Info';
 import BuildingVideo from './components/BuildingVideo';
 import Footer from './components/Footer';
+import Dream from './components/Dream';
+
 const LagoonLandingPage: React.FC = () => {
   return (
     <div className="w-full bg-white font-poppins">
@@ -20,22 +22,7 @@ const LagoonLandingPage: React.FC = () => {
       <BuildingVideo/>
 
       {/* Find Your Dream Home */}
-      <section className="relative h-96">
-        <img 
-          src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1600&h=400&fit=crop" 
-          alt="Interior" 
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-          <div className="text-center text-white">
-            <h2 className="text-5xl font-extralight mb-4">FIND YOUR DREAM</h2>
-            <h2 className="text-5xl font-light mb-6">HOME TODAY</h2>
-            <button className="bg-white text-teal-700 px-8 py-3 rounded font-semibold hover:bg-gray-100">
-              EXPLORE NOW
-            </button>
-          </div>
-        </div>
-      </section>
+     <Dream/>
 
       {/* Lagoon Details */}
       <section className="py-16">
